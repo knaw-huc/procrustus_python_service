@@ -13,6 +13,8 @@ services:
     container_name: ga_service
     environment:
       - VIRTUAL_HOST=proservice.sd.di.huc.knaw.nl
+    ports:
+      - 80:80
     volumes:
       - /home/robz/:/home
     networks:
