@@ -14,7 +14,7 @@ services:
     environment:
       - VIRTUAL_HOST=proservice.sd.di.huc.knaw.nl
     ports:
-      - 80:80
+      - 83:80
     volumes:
       - /home/robz/:/home
     networks:
