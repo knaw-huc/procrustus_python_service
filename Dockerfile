@@ -24,4 +24,4 @@ ADD ./src/ /app
 ENV FLASK_APP=/app/app.py
 ENV FLASK_ENV=production
 
-CMD ["gunicorn", "-b", "0.0.0.0:5012", "-t", "60", "-w", "4", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "-t", "60", "-w", "4", "app:app"]

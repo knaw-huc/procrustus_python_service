@@ -13,8 +13,10 @@ services:
     container_name: ga_service
     environment:
       - VIRTUAL_HOST=proservice.sd.di.huc.knaw.nl
+    expose:
+      - 5000
     ports:
-      - 84:5012
+      - 5000:5000
     volumes:
       - /home/robz/:/home
     networks:
