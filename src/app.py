@@ -29,7 +29,7 @@ def after_request(response):
 
 @app.route("/")
 def hello_world():
-    retStruc = {"app": "Procrustus service", "version": "0.1"}
+    retStruc = {"app": "Procrustus service", "version": "0.9"}
     return json.dumps(retStruc)
 
 

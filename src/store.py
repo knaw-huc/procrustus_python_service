@@ -424,7 +424,7 @@ class Store:
             },
             {
                 "dataSet": "u692bc364e9d7fa97b3510c6c0c8f2bb9a0e5123b__onstage",
-                "label": "Onstage",
+                "label": "On stage",
                 "indexes": [{"collection": "onstage_http___rdfs_org_ns_void_dataset",
                              "collection_id": "http___rdfs_org_ns_void_Dataset", "label": "Dataset"},
                             {"collection": "onstage_https___schema_org_theatreevent",

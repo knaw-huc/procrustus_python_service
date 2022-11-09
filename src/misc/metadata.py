@@ -233,7 +233,7 @@ class MetaData:
             {
                 "dataset": "u692bc364e9d7fa97b3510c6c0c8f2bb9a0e5123b__onstage",
                 "metadata": {
-                    "title": "ONSTAGE",
+                    "title": "Onstage",
                     "description": [
                         "Online Datasystem of Theatre in Amsterdam from the Golden Age to the present. This is your address for questions about the repertoire, performances, popularity and revenues of the cultural program in Amsterdam’s public theatre during the period 1637 - 1772. All data provided in this system links to archival source materials in contemporary administration.",
                         "",
