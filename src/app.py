@@ -10,7 +10,7 @@ import requests
 app = Flask(__name__)
 
 config = {
-    "url" : "localhost",
+    "url" : "n-195-169-89-127.diginfra.net",
     "port" : "9200",
     "doc_type" : "diplo"
 }
