@@ -10,7 +10,7 @@ import requests
 app = Flask(__name__)
 
 config = {
-    "url" : "n-195-169-89-127.diginfra.net",
+    "url" : "localhost",
     "port" : "9200",
     "doc_type" : "diplo"
 }
@@ -67,9 +67,11 @@ def get_metadata_store(md):
 @app.route("/get_metadata/<md>")
 def get_metadata(md):
     if md == 'all':
-        store = Store()
-        data = store.get_data()
-        result = tb.get_all_metadata(data)
+        #store = Store()
+        #data = store.get_data()
+        #result = tb.get_all_metadata(data)
+        store = metadata.MetaData()
+        result = store.send_metadata_list()
     else:
         result = tb.get_metadata(md)
     return json.dumps(result)
