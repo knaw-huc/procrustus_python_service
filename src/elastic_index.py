@@ -6,8 +6,7 @@ import math
 class Index:
     def __init__(self, config):
         self.config = config
-        self.es = Elasticsearch([{"host": self.config["url"], "port": self.config["port"]}])
-        self.client = Elasticsearch()
+        self.client = Elasticsearch([{"host": self.config["url"], "port": self.config["port"]}])
 
     def no_case(self, str_in):
         str = str_in.strip()
