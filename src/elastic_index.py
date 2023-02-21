@@ -7,7 +7,7 @@ class Index:
     def __init__(self, config):
         self.config = config
         self.es = Elasticsearch([{"host": self.config["url"], "port": self.config["port"]}])
-        self.client = Elasticsearch([{"host": self.config["url"], "port": self.config["port"]}])
+        self.client = Elasticsearch()
 
     def no_case(self, str_in):
         str = str_in.strip()
@@ -96,7 +96,7 @@ class Index:
                     "from": start,
                     "_source": ["uri", "title"],
                     "sort": [
-                        { orderFieldName: {"order":"asc"}}
+                        { "title.keyword": {"order":"asc"}}
                     ]
                 }
             )
@@ -122,7 +122,6 @@ class Index:
                     ]
                 }
             )
-
         ret_array = {"amount" : response["hits"]["total"]["value"], "pages": math.ceil(response["hits"]["total"]["value"] / length) ,"items": []}
         for item in response["hits"]["hits"]:
             ret_array["items"].append(item["_source"])

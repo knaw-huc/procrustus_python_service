@@ -28,6 +28,9 @@ class Timbuctoo_handler:
         ret_struc["dataSetId"] = result["data"]["dataSetMetadata"]["dataSetId"]
         ret_struc["dataSetName"] = result["data"]["dataSetMetadata"]["dataSetName"]
         ret_struc["items"] =  result["data"]["dataSetMetadata"]["collectionList"]["items"]
+        for item in ret_struc["items"]:
+            if item["title"]:
+                item["title"] = item["title"]["value"]
         return ret_struc
 
 
@@ -68,9 +71,7 @@ class Timbuctoo_handler:
     def get_all_metadata(self, store):
         retList = []
         for item in store["dataSets"]:
-            print(item["dataSet"])
             md = self.get_metadata(item["dataSet"])
-            print(md)
             retList.append({"dataset": item["dataSet"], "metadata": md})
         return retList
 
@@ -118,7 +119,6 @@ class Timbuctoo_handler:
 
 
     def build_query(self, dataset, collection, uri):
-        print(collection)
         props = self.get_props(dataset, collection)
         self.normalize_props(props)
         values = self.value_extractor(props)
@@ -126,9 +126,9 @@ class Timbuctoo_handler:
         return query
 
     def normalize_props(self, props):
-        # print("<props>")
-        # print(props)
-        # print("</props>")
+        #print("<props>")
+        #print(props)
+        #print("</props>")
         for item in props["data"]["dataSetMetadata"]["collection"]["properties"]["items"]:
             self.normalized_props[item["name"]] = item
 
@@ -334,7 +334,6 @@ class Timbuctoo_handler:
         query = self.build_query(dataset, collection, uri)
         list = self.create_adressed_prefixes(dataset)
         result = self.fetch_data(query)
-        print(query)
         items = self.model_results(dataset, collection, result, list)
         if collection != "schema_Role":
             items = self.undouble_items(items)

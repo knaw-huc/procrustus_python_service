@@ -114,6 +114,24 @@ class MetaData:
                 }
             },
             {
+                "dataset": "u692bc364e9d7fa97b3510c6c0c8f2bb9a0e5123b__saa",
+                "metadata": {
+                    "title": "City Archives of Amsterdam",
+                    "description": "RDF dataset based on the inventories and indices of the Amsterdam City Archives. It features the persons that are indexed by the archive in relation to the registration event that they are mentioned in.\n\nIn total, twelve indices and their respective inventory information are covered:\n1. Index op notarieel archief\n2. Index op doopregisters\n3. Index op ondertrouwregisters\n4. Index op kwijtscheldingen\n5. Index op poorterboeken\n6. Index op confessieboeken\n7. Index op boetes op trouwen en begraven\n8. Index op begraafregisters voor 1811\n9. Index op overledenen gast pest werk spinhuis\n10. Index op averijgrossen\n11. Index op boedelpapieren\n12. Index op lidmatenregister doopsgezinde gemeente\n\nAll data have been converted from EAD or A2A into the Golden Agents archival ontology ROAR++. See for more information: https://github.com/knaw-huc/golden-agents-saa-pipeline/",
+                    "imageUrl": "",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "publisher": "Golden Agents project",
+                    "creator": "Golden Agents project",
+                    "contributor": "",
+                    "dataProvider": "Amsterdam City Archives",
+                    "subject": "Archival data",
+                    "source": "https://opendata.picturae.com/organization/ams",
+                    "created": "2018-11-01",
+                    "modified": "2022-10-25",
+                    "sparqlEndpoint": "https://sparql2.goldenagents.org/saa"
+                }
+            },
+            {
                 "dataset": "u692bc364e9d7fa97b3510c6c0c8f2bb9a0e5123b__notarissennetwerk",
                 "metadata": {
                     "title": "Notary network (Notarissennetwerk)",
@@ -233,7 +251,7 @@ class MetaData:
             {
                 "dataset": "u692bc364e9d7fa97b3510c6c0c8f2bb9a0e5123b__onstage",
                 "metadata": {
-                    "title": "Onstage",
+                    "title": "ONSTAGE",
                     "description": [
                         "Online Datasystem of Theatre in Amsterdam from the Golden Age to the present. This is your address for questions about the repertoire, performances, popularity and revenues of the cultural program in Amsterdam’s public theatre during the period 1637 - 1772. All data provided in this system links to archival source materials in contemporary administration.",
                         "",
