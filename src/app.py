@@ -12,7 +12,7 @@ app = Flask(__name__)
 config = {
     "url" : "n-195-169-89-127.diginfra.net",
     "port" : "9200",
-    "doc_type" : "diplo"
+    "doc_type" : "ga"
 }
 
 index = Index(config)
@@ -29,7 +29,7 @@ def after_request(response):
 
 @app.route("/")
 def hello_world():
-    retStruc = {"app": "Procrustus service", "version": "0.9"}
+    retStruc = {"app": "Procrustus service", "version": "0.1"}
     return json.dumps(retStruc)
 
 
@@ -110,6 +110,14 @@ def get_human_item():
 def get_prefixes(ds):
     result = tb.get_prefixes(ds)
     return json.dumps(result)
+
+@app.route("/get_switch", methods=["GET"])
+def switch():
+    if not request.values.get('uri'):
+        return "No uri specified", 400
+    else:
+        result = index.get_switch(request.values.get('uri'));
+        return json.dumps(result);
 
 
 @app.get('/typeinfo')
